@@ -144,11 +144,22 @@ streamlit run app.py
 Visit: http://localhost:8501
 
 ### 5. Deploy to Streamlit Cloud
-1. Push your code to GitHub
-2. Go to https://share.streamlit.io/
-3. Connect your repository
-4. Set main file: `app.py`
-5. Deploy!
+
+**Step 1**: Train the model (one-time setup)
+```bash
+python train_and_deploy.py
+git add models/ data/feature_names.csv
+git commit -m "Add trained models for deployment"
+git push
+```
+
+**Step 2**: Deploy on Streamlit Cloud
+1. Go to https://share.streamlit.io/
+2. Sign in with your GitHub account
+3. Click "New app"
+4. Select repository: `krishnachaitanyabodepudi/hospital-readmission-predictor`
+5. Main file: `app.py`
+6. Click "Deploy!"
 
 Your app will be live at: `https://your-app-name.streamlit.app`
 
