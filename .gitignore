@@ -1,0 +1,32 @@
+# Large data files
+data/X_train.csv
+data/X_test.csv
+data/y_train.csv
+data/y_test.csv
+data/raw_diabetic_data.csv
+
+# Keep only necessary files for deployment
+data/feature_names.csv
+
+# Models (too large for GitHub)
+models/*.joblib
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

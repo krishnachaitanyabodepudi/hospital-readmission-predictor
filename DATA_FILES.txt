@@ -1,0 +1,29 @@
+⚠️ IMPORTANT: Model and Data Files
+
+Due to GitHub's file size limits, the large model and data files are not included in this repository.
+
+To download the necessary files:
+
+1. Download from Google Drive or alternative storage:
+   - models/best_model.joblib
+   - models/scaler.joblib
+   - models/training_results.joblib
+   - data/feature_names.csv (included)
+   - data/X_train.csv
+   - data/X_test.csv
+   - data/y_train.csv
+   - data/y_test.csv
+   - data/raw_diabetic_data.csv
+
+2. Place them in the respective folders:
+   - models/ folder
+   - data/ folder
+
+3. Run the dashboard:
+   streamlit run app.py
+
+The dashboard requires these files to work properly.
+
+Alternatively, for Streamlit Cloud deployment:
+- Contact the repository owner for access to model files
+- Or train the model locally first using: python src/data_preprocessing.py
