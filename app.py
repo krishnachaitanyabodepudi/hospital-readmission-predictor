@@ -44,17 +44,26 @@ class HospitalReadmissionDashboard:
         self.load_models()
     
     def load_models(self):
-        if os.path.exists('models/best_model.joblib'):
-            self.model = joblib.load('models/best_model.joblib')
-            st.success("✅ Model loaded")
-        else:
-            st.error("❌ Model not found")
-        
-        if os.path.exists('models/scaler.joblib'):
-            self.scaler = joblib.load('models/scaler.joblib')
-        
-        if os.path.exists('data/feature_names.csv'):
-            self.feature_names = pd.read_csv('data/feature_names.csv')['feature'].tolist()
+        try:
+            if os.path.exists('models/best_model.joblib'):
+                self.model = joblib.load('models/best_model.joblib')
+                st.success("✅ Model loaded successfully")
+            else:
+                st.error("❌ Model file not found. Please train the model first.")
+                st.info("💡 Run: python train_and_deploy.py")
+            
+            if os.path.exists('models/scaler.joblib'):
+                self.scaler = joblib.load('models/scaler.joblib')
+            else:
+                st.warning("⚠️ Scaler not found")
+            
+            if os.path.exists('data/feature_names.csv'):
+                self.feature_names = pd.read_csv('data/feature_names.csv')['feature'].tolist()
+            else:
+                st.warning("⚠️ Feature names file not found")
+        except Exception as e:
+            st.error(f"Error loading models: {e}")
+            st.info("Please ensure model files are present in the repository.")
     
     def create_header(self):
         st.markdown('<h1 class="main-header">🏥 Hospital Readmission Risk Predictor</h1>', unsafe_allow_html=True)
