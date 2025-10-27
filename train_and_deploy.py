@@ -7,7 +7,7 @@ import os
 from src.data_preprocessing import HospitalDataPreprocessor
 
 def main():
-    print("🏥 Training Hospital Readmission Prediction Model...")
+    print("Training Hospital Readmission Prediction Model...")
     
     # Initialize preprocessor
     preprocessor = HospitalDataPreprocessor()
@@ -40,7 +40,7 @@ def main():
     print("\n3. Evaluating model...")
     predictions = model.predict(X_test)
     accuracy = accuracy_score(y_test, predictions)
-    print(f"✅ Model Accuracy: {accuracy:.4f}")
+    print(f"Model Accuracy: {accuracy:.4f}")
     
     print("\n4. Saving model and scaler...")
     os.makedirs('models', exist_ok=True)
@@ -52,7 +52,7 @@ def main():
     import pandas as pd
     pd.DataFrame({'feature': feature_names}).to_csv('data/feature_names.csv', index=False)
     
-    print("\n✅ Model training complete! Ready for deployment.")
+    print("\nModel training complete! Ready for deployment.")
     print(f"   Model saved: models/best_model.joblib")
     print(f"   Scaler saved: models/scaler.joblib")
     print(f"   Features saved: data/feature_names.csv")

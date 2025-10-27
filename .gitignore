@@ -6,10 +6,10 @@ data/y_test.csv
 data/raw_diabetic_data.csv
 
 # Keep only necessary files for deployment
-data/feature_names.csv
+# data/feature_names.csv
 
-# Models (too large for GitHub)
-models/*.joblib
+# Models
+# models/*.joblib
 
 # Python
 __pycache__/
