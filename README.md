@@ -8,6 +8,12 @@
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://docker.com)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+## 🎬 Live Demo
+
+**👉 [Try the Interactive Dashboard](https://hospitalreadmissionpredictor.streamlit.app/)**
+
+Experience the AI-powered prediction system with real-time risk assessment, detailed explanations, and batch processing capabilities!
+
 ## 🎯 Problem Statement
 
 Hospital readmissions are a critical healthcare challenge that affects patient outcomes and healthcare costs. In the United States alone, hospital readmissions cost billions of dollars annually and are often preventable with early intervention. This project addresses the urgent need for accurate, explainable AI systems that can identify high-risk patients before discharge, enabling healthcare providers to implement targeted interventions.
